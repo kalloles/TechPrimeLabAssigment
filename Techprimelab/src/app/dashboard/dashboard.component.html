@@ -1,0 +1,69 @@
+<div class="sidebar">
+  <a href="/dashBoard">
+    <img src="assets/Dashboard-active.svg" alt="" width="20" height="20">
+  </a>
+  <a href="/project-list">
+    <img src="assets/Project-list.svg" alt="" width="20" height="20">
+  </a>
+  <a href="/project">
+    <img src="assets/create-project.svg" alt="" width="20" height="20">
+  </a>
+</div>
+
+
+<div class="content">
+  <div class="header-text" style="position: absolute; color: white; display: flex; align-items: center;">
+    <img src="assets/back arrow.svg"style="width: 10px; margin-right: 10px;">
+    <h2>Dashboard</h2>
+  </div>
+  <div class="header-image">
+    <img src="assets/Header.png" style="width: 100%;">
+    <img src="assets/Logo.svg" style="position: absolute; top: 45px; left: 743px; z-index: 1; width: 75px;" alt="Overlay Image">
+
+  </div>
+
+
+
+
+  <!-- <div class="class head">
+
+  </div>
+
+  <div class="boxes">
+    <div class="boxes-1"></div>
+    <div class="boxes-1"></div>
+    <div class="boxes-1"></div>
+    <div class="boxes-1"></div>
+    <div class="boxes-1"></div>
+  </div>
+  <div class="header-text">
+    
+  </div>
+  <div class="graph">
+
+  </div> -->
+  <div class="stats">
+    <div class="stat">
+        <p class="label">Total Projects</p>
+        <p class="value">{{ projectInfo.total }}</p>
+    </div>
+    <div class="stat">
+        <p class="label">Closed</p>
+        <p class="value">{{ projectInfo.closed }}</p>
+    </div>
+    <div class="stat">
+        <p class="label">Running</p>
+        <p class="value">{{ projectInfo.running }}</p>
+    </div>
+    <div class="stat">
+        <p class="label">Closure Delay</p>
+        <p class="value">{{ projectInfo.delayedRunning }}</p>
+    </div>
+    <div class="stat">
+        <p class="label">Canceled</p>
+        <p class="value">{{ projectInfo.cancel }}</p>
+    </div>
+</div>
+<app-chart></app-chart>
+
+</div>

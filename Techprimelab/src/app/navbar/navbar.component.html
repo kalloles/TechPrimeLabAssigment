@@ -1,0 +1,23 @@
+<div class="navbar">
+    <div class="nav-items">
+      <a [routerLink]="'/dashboard'" routerLinkActive="active">
+        <div class="nav-item" [class.active]="location === '/dashboard'">
+          <img src="{{ location === '/dashboard' ? '/assets/Dashboard-active.svg' : '/assets/Dashboard.svg' }}" alt="Dashboard" />
+        </div>
+      </a>
+      
+      <a [routerLink]="'/add-project'" routerLinkActive="active">
+        <div class="nav-item" [class.active]="location === '/add-project'">
+          <img src="{{ location === '/add-project' ? '/assets/create-project-active.svg' : '/assets/create-project.svg' }}" alt="Add Project" />
+        </div>
+      </a>
+  
+      <div class="nav-item" (click)="handleLogout()">
+        <img src="/assets/Logout.svg" alt="Logout" />
+      </div>
+    </div>
+  
+  </div>
+  <div class="dashboard-container">
+    <router-outlet></router-outlet> 
+  </div>

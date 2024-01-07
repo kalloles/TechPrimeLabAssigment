@@ -1,0 +1,41 @@
+<div class="logo-bg">
+  <div class="login-logo">
+     <img src="/assets/Logo.svg" alt="Logo" class="logo">
+  </div>
+   
+  <h1 class="special-heading">Online Project Management</h1>
+  <div class="login-page">
+     <div class="login-box">
+        <h1 class="heading">Login To Get Started</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="input-group">
+            <div class="form-group" [class.invalid]="isInvalid('email')">
+              <label for="email">Email</label>
+              <input type="email" formControlName="email" placeholder="Enter your email">
+              <div *ngIf="isInvalid('email')" class="error-message">Email is required</div>
+            </div>
+          
+            <div class="form-group" [class.invalid]="isInvalid('password')">
+              <label for="password">Password</label>
+            <div class="password-input">
+              <input type="{{ showPassword ? 'text' : 'password' }}" formControlName="password" placeholder="Enter your password">
+              <div class="show-password-icon" (click)="togglePassword()"></div>
+            </div>
+            <div *ngIf="isInvalid('password')" class="error-message">Password is required</div>
+          </div>
+          <div class="forgot-password-container">
+            <a href="#" class="forgot-password">Forgot Password?</a>
+         </div>
+        </div>
+    
+          <div class="action-btn center-button">
+            <button type="submit" class="login-button" [disabled]="loading">Login</button>
+          </div>
+          
+        </form>
+     </div>
+    </div>
+    <div class="error-container" *ngIf="message">
+     <div class="error-message invalid-message">{{ message }}</div>
+    </div>
+  </div>

@@ -1,0 +1,213 @@
+
+  .form-container {
+    background-color: 	#dbd4d4; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-top: 17px;
+    
+  }
+  table {
+    width: 94%;
+  }
+  
+  
+    .sidebar {
+    margin-top: 200px;
+    width: 80px;
+    background-color: #ffff;
+    position: fixed;
+    height: 100%;   
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    margin: auto;
+  }
+   
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  div.content {
+    margin-left: 80px   ;
+    padding: 1px 0px;
+    background-color: #FFF;
+    height: 900px;
+    width: 90%;
+   
+  }
+
+.mat-elevation-z2 {
+  background-color: white;
+}
+
+
+.mat-elevation-z2 {
+  padding: 20px; 
+}
+
+
+.mat-elevation-z2 table {
+  width: 100%;
+}
+.list-project {
+  background: url('/assets/Header-bg.svg') no-repeat top;
+  background-size: 95%; 
+  background-position: right top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 40px;
+}
+.logo-container {
+  margin: auto;
+}
+
+.header {
+  display: flex;
+}
+
+.back-link {
+  color: white;
+  font-size: 20px;
+  margin-left: 49px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-and-sort {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 94%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin-left: 49px;
+
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+button {
+  margin-right: 5px;
+}
+
+.list-project {
+  background: url('/assets/Header-bg.svg') no-repeat top;
+  background-size: 95%; 
+  background-position: right top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 40px;
+}
+.logo-container {
+  margin: auto;
+}
+
+.header {
+  display: flex;
+}
+
+.back-link {
+  color: white;
+  font-size: 20px;
+  margin-left: 49px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* .search-and-sort {
+  margin-bottom: 20px;
+} */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin-left: 49px;
+
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+button {
+  margin-right: 5px;
+}
+.search-field {
+  display: flex;
+  align-items: center;
+}
+
+.sort {
+  margin-left: auto; 
+  margin-bottom: 19px;
+  margin-right: 20px;
+}
+
+.bootstrap-select .mat-select-trigger {
+
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 6px 12px;
+  height: auto;
+  background-color: #fff;
+  color: #495057;
+  line-height: 1.5;
+  appearance: none;
+}
+
+.bootstrap-select .mat-select-trigger .mat-select-arrow {
+
+  right: auto;
+  left: 10px;
+}
+
+.bootstrap-select select.form-control {
+  /* Make the select smaller */
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+/* Move the dropdown to the left */
+.bootstrap-select .dropdown-menu {
+  left: 0 !important;
+  right: auto !important;
+}
+
+.bootstrap-select select.form-control{
+  font-size: 12px;
+  padding: 4px 8px;
+  width: 151px;
+  margin-left: 1261px;
+  margin-bottom: 19px;
+}

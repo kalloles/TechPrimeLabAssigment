@@ -1,0 +1,11 @@
+.chart-container {
+    margin: 20px;
+    margin-left: 78px;  
+    width: 41%; 
+    background-color: white;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+  }

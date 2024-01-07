@@ -1,0 +1,163 @@
+
+  <div class="sidebar">
+    <a href="/dashboard">
+      <img src="assets/Dashboard.svg" alt="" width="20" height="20">
+    </a>
+    <a href="/project-list">
+      <img src="assets/Project-list.svg" alt="" width="20" height="20">
+    </a>
+    <a href="/project">
+      <img src="assets/create-project-active.svg" alt="" width="20" height="20">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="header-text" style="position: absolute; color: white; display: flex; align-items: center;">
+      <img src="assets/back arrow.svg"style="width: 10px; margin-right: 10px;">
+      <h2> Create Project</h2>
+    </div>
+    <div class="header-image">
+      <img src="assets/Header.png" style="width: 100%;">
+      <img src="assets/Logo.svg" style="position: absolute; top: 45px; left: 743px; z-index: 1; width: 50px;" alt="Overlay Image">
+  
+    </div>
+
+  <div class="col-10">
+    
+
+
+    <div class="container">
+      <form class="form-container">
+    
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="mb-3">
+              <textarea class="form-control" placeholder="Enter Project Theme" [(ngModel)]="formData.projectTheme" name="projectTheme"></textarea>
+
+                <div *ngIf="!formData.Projecttheme && projectForm.controls['projectTheme'].invalid && projectForm.controls['projectTheme'].touched"
+        class="error-message">
+                  Project theme is required!
+                </div>
+            </div>
+          </div>
+          <div class="col text-end">
+    
+            <button type="button" class="btn btn-primary"  (click)="handleSubmit()">Save project</button>
+          </div>
+        </div>
+    
+       <div class="row mt-3">
+      <div class="col">
+        <div class="form-group">
+          <label for="reason" class="mb-2">Reason</label>
+          <select class="form-select" name="reason" id="reason" [(ngModel)]="formData.reason">
+            <option [ngValue]="'For Business'">For Business</option>
+            <option [ngValue]="'Transport'">Transport</option>
+            <option [ngValue]="'Dealership'">Dealership</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="type" class="mb-2">Type</label>
+          <select class="form-select" name="type" id="type" [(ngModel)]="formData.type" (ngModelChange)="handleTypeChange($event)">
+            <option [ngValue]="'Internal'">Internal</option>
+            <option [ngValue]="'External'">External</option>
+            <option [ngValue]="'Vendor'">Vendor</option>
+          </select>
+        </div>
+      </div>
+      
+          <div class="col">
+            <div class="form-group">
+              <label for="division" class="mb-2">Division</label>
+              <select class="form-select" name="division" id="division" [ngModel]="formData.division" (change)="handleDivisionChange($event)">
+                <option Value="Filters">Filters</option>
+                <option  Value="Compressor">Compressor</option>
+                <option Value="Pumps">Pumps</option>
+                <option Value="Water Heater">Water Heater</option>
+                <option  Value="Audi">Audi</option>
+              </select>
+            </div>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="category" class="mb-2">Category</label>
+              <select class="form-select" name="category" id="category" [(ngModel)]="formData.category" (change)="handleCategoryChange($event)">
+                <option value="Quality A">Quality A</option>
+                <option value="Quality B">Quality B</option>
+                <option value="Quality C">Quality C</option>
+                <option value="Quality D">Quality D</option>
+                <option value="Quality E">Quality E</option>
+              </select>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="priority" class="mb-2">Priority</label>
+              <select class="form-select" name="priority" id="priority" [(ngModel)]="formData.priority">
+                <option selected>High</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+              </select>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="department" class="mb-2">Department</label>
+              <select class="form-select" name="department" id="department"[(ngModel)]="formData.department">
+                <option selected>Strategy</option>
+                <option value="Finance">Finance</option>
+                <option value="Quality">Quality</option>
+                <option value="Maintenance">Maintenance</option>
+                <option value="Stores">Stores</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col">
+            <div class="form-group">
+              <label for="startDate" class="mb-2">Start Date</label>
+              <input type="date" class="form-control" id="startDate" name="startDate"  [(ngModel)]="formData.startDate">
+              <div *ngIf="!formData.Startdate && projectForm.controls['startDate'].invalid && projectForm.controls['startDate'].touched" class="error-message">
+                StartDate is required!
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="endDate" class="mb-2">End Date</label>
+              <input type="date" class="form-control" id="endDate" name="endDate" [(ngModel)]="formData.endDate">
+              <div *ngIf="!formData.Enddate && projectForm.controls['endDate'].invalid && projectForm.controls['endDate'].touched" class="error-message">
+                EndDate is required!
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="location" class="mb-2">Location</label>
+              <select class="form-select" name="location" id="location"[(ngModel)]="formData.location">
+                <option selected>Select City</option>
+                <option value="Pune">Pune</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Tokyo">Tokyo</option>
+              </select>
+            </div>
+          </div>
+        
+        </div>
+        <div class="status">
+          <p>Status: Registered</p>
+         
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+

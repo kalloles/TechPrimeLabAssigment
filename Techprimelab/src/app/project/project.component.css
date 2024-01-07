@@ -1,0 +1,95 @@
+
+.container {
+  padding-top: 50px;
+  position: relative;
+}
+
+.form-container {
+  background-color: #FFFFFF;
+  padding: 29px;
+  border-radius: 22px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: -83px;
+  width: 1426px;
+}
+
+
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px; 
+}
+
+
+.main-image {
+  position: relative;
+  display: inline-block;
+}
+
+.base-image {
+  display: block;
+  width: 100%; 
+  height: auto;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.sidebar {
+  margin-top: 200px;
+  width: 80px;
+  background-color: #ffff;
+  position: fixed;
+  height: 100%;   
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  margin: auto;
+}
+ 
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 80px   ;
+  padding: 1px 0px;
+  background-color: #f1eeee;
+  height: 900px;
+ 
+}
+
+.status {
+
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  left: 10px;
+}
+
+.status p {
+  font-weight: bold;
+  color: black;
+  margin-left: 1163px;
+
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
